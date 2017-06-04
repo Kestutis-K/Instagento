@@ -1,0 +1,21 @@
+<h3><?php echo $block->getData('title'); ?></h3> 
+<script>
+    require(["instafeed"], function(Instafeed){
+
+        var feed = new Instafeed({
+            get: 'user',
+            userId : '<?php echo $block->getData('instagram_user_id'); ?>',
+//            clientId: '145696612', // Ex: 1374300081
+            accessToken: '<?php echo $block->getData('instagram_access_token'); ?>',
+            sortBy : '<?php echo $block->getData('sort_by'); ?>',
+            template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /> </a>',
+            limit: <?php echo $block->getData('image_quantity'); ?>,
+            resolution: '<?php echo $block->getData('image_resolution'); ?>'
+        });
+        feed.run();
+
+    });
+</script>
+<div id="instafeed">
+
+</div>

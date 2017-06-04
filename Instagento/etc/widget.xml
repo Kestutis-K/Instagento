@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="instagram_on_magento" class="KestutisK\Instagento\Block\Widget\Instagento">
+    <label translate="true">Instagento</label>
+    <description>Instagento - Instagram on Magento</description>
+    <parameters>
+        <parameter name="title" xsi:type="text" required="true" visible="true">
+            <label translate="true">Title</label>
+        </parameter>
+        <parameter name="instagram_user_id" xsi:type="text" required="true" visible="true">
+            <label translate="true">Instagram user ID</label>
+        </parameter>
+        <parameter name="instagram_access_token" xsi:type="text" required="true" visible="true">
+            <label translate="true">Instagram access token</label>
+        </parameter>
+        <parameter name="image_quantity" xsi:type="text" required="true" visible="true">
+            <label translate="true">How many images to show</label>
+        </parameter>
+        <parameter name="sort_by" xsi:type="select" source_model="KestutisK\Instagento\Model\Config\Source\SortBy" visible="true" required="true">
+            <label translate="true">Sort images by</label>
+        </parameter>
+        <parameter name="image_resolution" xsi:type="select" source_model="KestutisK\Instagento\Model\Config\Source\ImageResolution" visible="true" required="true">
+            <label translate="true">Image size</label>
+        </parameter>
+    </parameters>
+
+    </widget>
+</widgets>
